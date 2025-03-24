@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}المكتبة القانونية{% endblock %}
+{% block content %}
+
+    <form action="" method="get" style="visibility: hidden;">
+        <div class="search">
+            <span class="icon">
+                <i class='bx bx-search icon'></i>
+            </span>
+            <input type="search" name="" id="">
+            <button class="btn-search">
+                بحث
+            </button>
+        </div>
+    </form>
+    
+    <section class='library'>
+        <div class="container">
+            <h1>المكتبة القانونية</h1>
+            <p class="text-prag">
+                 هي مجموعة شاملة من المصادر والمراجع القانونية التي تضم القوانين الاحكام القضائية الفتاوى القانونية والدراسات الفقهية بهدف دعم البحث القانوني وتقديم الاستشارات المتخصصة توفر المكتبة للباحثين والمحامين الادوات اللازمة لفهم القضايا القانونية بعمق مما يساعد في تقديم حلول قانونية دقيقة وموثوقة           
+            </p>
+        </div>
+    
+        <div class="container-card" style="display: flex; flex-wrap: wrap; justify-content: center; visibility: hidden;">
+            <div class="link-img">
+                <img src="{% static 'images/lawerbuild.webp'%}" alt="">
+                <a href="#" class="link-files">
+                    صيغه دعوه
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

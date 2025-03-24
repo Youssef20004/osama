@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}الخدمات القانونية لمكتب الأستاذ أسامة عبدالرحيم{% endblock %}
+
+{% block content %}
+    <body class="body">
+        <section class="page-services">
+            <div class="text" style="text-align: center;">
+                <h1 style="font-size: 3rem; color: var(--color-text);">اطلع على خدماتنا</h1>
+                <p>
+                    نحن نقدم مجموعة شاملة من الخدمات القانونية لمساعدتك في تحقيق أفضل النتائج سواء كنت بحاجة إلى استشارة قانونية تمثيل في القضايا أو صياغة العقود نحن هنا لدعمك بخبرة واحترافية
+                </p>
+            </div>
+            <div class="cards">
+                <a href="#" class="link-card">
+                    <div class="card">
+                        <img src="{% static 'images/new-1.png'%}" alt="">
+                        <address>قضية سب وقصف </address>
+                        <p>
+                            قضيه سب والقصف ماهيه ألا قضية سب وقصف وعشان كدا احنا فى سب وقصف مش بنشتغل بقصف بس او سب بس لكن احنا بنشتغل اتنين يعني لو حد جه ومعاه واحد سب فقط مش هنقدر ناخده ودا طبقا لسياسية المكتب 
+                        </p>
+    
+    
+                        <a href="#" class="more">
+                            <i class='bx bx-right-arrow-alt'></i>
+                            قراءة المزيد 
+                        </a>
+                    </div>
+                </a>
+            </div>    
+        </section>
+    </body>
+{% endblock %}
+    
+
+
+

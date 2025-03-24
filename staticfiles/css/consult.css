@@ -1,0 +1,199 @@
+
+/* SECTION CONSLUT */
+
+.consult .consult-img{
+    position: relative; 
+    background: url("http://127.0.0.1:8000/static/images/23467.png") no-repeat center center;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+.consult .text{
+    position: absolute;
+    top: 0%;
+    height: 250px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.consult .text h1{
+    text-align: center;
+}
+
+/* FORMS */
+
+
+.container-forms{
+    margin-block-start: 40px;
+}
+
+/* FORMS Image */
+
+.container-forms .img{
+    display: grid;
+    place-items: center;
+}
+
+.container-forms .img img{
+    max-width: 350px;
+    width: 100%;
+}
+/* FORMS form */
+.container-forms .form{
+    padding-inline: 30px;
+}
+.container-forms .form h1{
+    color: var(--color-text);
+    white-space: nowrap;
+    padding-block: 30px;
+}
+.container-forms .form p{
+    padding-block-end: 25px;
+    font-weight: 700;
+}
+
+.container-forms .form span,
+.container-forms .form label{
+    float: right;
+    margin-right: 10px;
+}
+.container-forms .form textarea,
+.container-forms .form input{
+    width: 100%;
+    height: 50px;
+    padding-inline: 20px;
+    color: black;
+    direction: rtl;
+    background: white;
+}
+
+.container-forms .form input[type= 'text']{
+    font-weight: 700;
+}
+
+.container-forms .form textarea{
+    height: 100px;
+}
+
+.container-forms .form .btn{
+    margin-block: 40px;
+    max-width: 350px;
+}
+@media screen and (min-width: 768px){
+    /* SECTION CONSLUT */
+    .consult .text{
+        top: 10%;
+    }
+    .consult .text h1{
+        font-size: 2rem;
+    }
+
+    /* FORMS */
+    .container-forms{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .container-forms .form{
+        padding-inline: 0px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    /* SECTION CONSLUT */
+    .consult .text{
+        top: 25%;
+    }
+    .consult .text h1{
+        font-size: 3rem;
+    }
+    /* FORMS */
+    .container-forms{
+        padding-inline: 130px;
+    }
+    /* FORMS forms*/
+    .container-forms .form{
+        min-width: 550px;
+    }
+
+    /* FORMS Image */
+
+    .container-forms .img img{
+        max-width: 450px;
+    }
+}
+
+
+@media screen and (min-width: 1600px){
+    /* FORMS */
+    .container-forms{
+        padding-inline: 240px;
+    }
+}
+@media screen and (min-width: 1700px){
+    /* FORMS */
+    .container-forms{
+        padding-inline: 300px;
+    }
+}
+@media screen and (min-width: 1900px){
+    /* FORMS */
+    .container-forms{
+        padding-inline: 350px;
+    }
+    /* FORMS forms */
+    .container-forms .form h1{
+        font-size: 2rem;
+    }
+  
+     /* FORMS Image */
+
+     .container-forms .img img{
+        max-width: 550px;
+    }
+
+    
+
+}
+@media screen and (min-width: 2100px){
+    /* FORMS */
+    .container-forms{
+        padding-inline: 400px;
+    }
+}
+@media screen and (min-width: 2300px){
+    /* FORMS */
+    .container-forms{
+        padding-inline: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-forms .form .errors{
+    background-color: brown;
+    width: 100%;
+    height: 90px;
+    display: none;
+    place-items: center;
+    border-radius: 3px;
+    padding-inline: 15px;
+} /* display None */
+

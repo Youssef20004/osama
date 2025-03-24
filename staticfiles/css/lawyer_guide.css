@@ -1,0 +1,39 @@
+.lawer_guide{
+    display: grid;
+    place-items: center;
+    margin-block: 150px;
+    text-align: center;
+}
+.lawer_guide .container{
+    padding-inline: 10px;
+}
+
+.lawer_guide h1{
+    color: var(--color-text);
+    font-size: 2rem;
+}
+
+.lawer-img{
+    
+}
+
+.lawer-lists{
+    padding: 20px;
+}
+.lawer-lists strong{
+    color: var(--color-text);
+}
+
+@media screen and (min-width:768px){
+    .lawer_guide{
+        text-align: right;
+    }
+    .lawer_guide .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .lawer-img{
+        max-width: 400px;
+    }
+}

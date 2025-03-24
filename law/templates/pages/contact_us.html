@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}اتصل بنا {% endblock %}
+{% block content %}
+    <section class="contact_us">
+        <div class="container">
+            <div class="contact-img-text">
+                
+                <div class="text-call">
+                    <h1>اتصل بنا</h1>
+                </div>
+            </div>
+    
+    
+            <div class="contact">
+                <div class="icon-text">
+                    <img src="{% static 'images/1.png'%}" alt="">
+                    <p>ابدأ استشارتك القانونية اليوم</p>
+                    <p>+201206281444</p>
+                </div>
+                <div class="icon-text">
+                    <img src="{% static 'images/2.png'%}" alt="">
+                    <p>البريد الالكتروني</p>
+                    <p>osamaabdelrhim@gmail.com</p>
+                </div>
+                <div class="icon-text">
+                    <img src="{% static 'images/3.png'%}" alt="">
+                    <p>العنوان</p>
+                    <p>فلمنج - شارع مصطفى كامل - الإسكندرية</p>
+                </div>
+            </div>
+    
+            <form action="" class="form-contact">
+                <h1 style="text-align: right">اتصل بنا الآن واستفد من استشارة قانونية مجانية</h1>
+    
+                <div class="input-label">
+                    <label for="fname">الاسم</label>
+                    <span>(مطلوب)</span>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input-label">
+                    <label for="fname">البريد الالكتروني</label><span>(مطلوب)</span>
+                    <input type="email">
+                </div>
+                <div class="input-label">
+                    <label for="fname">رقم الهاتف</label><span>(مطلوب)</span>
+                    <input type="text">
+                </div>
+                <div class="input-label">
+                    <label for="fname">سبب التواصل</label><span>(مطلوب)</span>
+                    <input type="text">
+                </div>
+                <div class="input-label">
+                    <label for="fname">الرسالة</label><span>(مطلوب)</span>
+                    <textarea name="" id=""></textarea>
+                </div>
+    
+                <button type="submit" class="btn btn-contact">أرسل رسالة</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

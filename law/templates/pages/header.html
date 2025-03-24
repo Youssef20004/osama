@@ -1,0 +1,54 @@
+{% load static %}
+
+
+
+<header class="header" data-header>
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="{% static 'images/logo2.png'%}" width="350" height="80" alt="My image">
+        </a>
+
+        <nav class="navbar" >
+            <div href="#" class="logo">
+                <a href="#" class="logo">
+            <img src="{% static 'images/logo2.png'%}" width="350" height="80" alt="My image">
+        </a>
+                
+                <button class="btn-toggle close-btn">
+                    <a href="#" class="open">
+                        <i class='bx bx-x'></i>
+                    </a>
+                </button>
+            </div>
+            <ul class="navbar-list">
+                <li>
+                        <a href="{% url "index"%}" class="navbar-link">الرئيسية</a>
+                        <!-- <i class='bx bx-chevron-down' ></i> -->
+                </li>
+                <li>
+                    <a href="{% url "services"%}" class="navbar-link">الخدمات القانونية</a>
+                    <i class='bx bx-chevron-down' ></i>
+                </li>
+                <li>
+                    <a href="{% url "library_law"%}" class="navbar-link">المكتبة القانونية</a>
+                    <i class='bx bx-chevron-down' ></i>
+                </li>
+                <li>
+                    <a href="{% url "lawyer_guide"%}" class="navbar-link">دليل المحامي</a>
+                    <i class='bx bx-chevron-down' ></i>
+                </li>
+                <li>
+                    <a href="{% url "contact"%}" class="navbar-link">اتصل بنا</a>
+                </li>
+            </ul>
+
+            <button class="btn navbar-btn">
+                <a href="{% url 'conslut'%}">اطلب استشارة الآن</a>
+            </button>
+        </nav>
+
+        <button class="btn-toggle menu-btn">
+            <a href="#"><i class='bx bx-menu'></i></a>
+        </button>
+    </div>
+</header>

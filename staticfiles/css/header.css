@@ -1,0 +1,228 @@
+/* header */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+.header.active{
+    position: fixed;
+    background-color: rgb(19, 27, 37, 1); 
+    box-shadow: var(--shadow-1);
+    animation: slideIn 500ms ease forwards;
+}
+@keyframes slideIn {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    padding-block: 15px;
+}
+.header .container .logo{
+    text-transform: uppercase;
+
+}
+.navbar .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+}
+
+.navbar .logo h1{
+    font-size: 2rem;
+}
+
+.navbar {
+    background-color: #0c111a;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -350px; 
+    max-width: 350px;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 5;
+    visibility: hidden;
+    transition: 500ms;
+    transition: transform 500ms ease-in-out, visibility 0s 500ms;
+    transform: translateX(0);
+}
+.navbar.active {
+    transform: translateX(-350px);
+    visibility: visible;
+    transition: transform 500ms ease-in-out, visibility 0s;
+}
+.navbar-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 40px;
+    height: 85%;
+}
+.navbar-list .navbar-link{
+    font-size: 1.5rem;
+}
+.navbar-list .navbar-link.active{
+    color: var(--color-text);
+}
+.navbar-list .navbar-link:hover{
+    transition: 500ms ease;
+    color: var(--color-text);
+}
+.navbar li{
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.navbar li i{
+    font-size: 1.5rem;
+}
+.btn{
+    background-color: var(--color-btn);
+    margin: auto;
+    width: 100%;
+    max-width: 150px;
+    white-space: nowrap;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+   
+}
+.btn:hover{
+    background-color: var(--color-hover-btn);
+    transition: 500ms ease-in-out;
+}
+.btn-toggle{
+    display: grid;
+    place-items: center;
+}
+.btn-toggle a{
+    font-size: 2rem;
+}
+
+
+@media screen and (min-width: 1024px){
+    /* header */
+    .header .navbar .btn{
+        font-size: 0.9rem;
+    }
+    /* header */
+    .header{
+        height: 100px;
+        padding-block: 15px;
+        padding-inline: 10px;
+    }
+    .header .container,
+    .navbar-list,
+    .navbar-link,
+    .navbar{
+        all: unset;
+    }
+    .navbar .logo,
+    .btn-toggle{display: none;}
+
+    .navbar,
+    .header .container,
+    .navbar-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo img{
+        width: 150px;
+    }
+    .navbar-list{
+        direction: rtl;
+        padding-inline: 30px;
+    }
+
+    .navbar .navbar-link{
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .navbar .btn{
+        padding: 5px;
+    }
+}
+@media screen and (min-width: 1440px){
+    
+    .header {
+        height: 100px;
+    }
+    .header .container .logo{
+        font-size: 1.8rem;
+    }
+
+    .logo img{
+        width: 250px;
+    }
+
+    .navbar .navbar-link{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .header .navbar .btn{
+        height: 50px;
+        max-width: 200px;
+    }
+}
+@media screen and (min-width: 1600px){
+    /* header */
+    .header{
+        height: 130px;
+    }
+    .logo img{
+        width: 300px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    /* header */
+
+    .navbar .navbar-link{
+        font-size: 1.5rem;
+    }
+
+    .navbar .btn{
+        font-size: 25px;
+        max-width: 270px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    /* header */
+   .header{
+       height: 200px;
+       padding-block: 30px;
+   }
+   .logo img{
+       width: 450px;
+       height: 150px;
+   }
+   .navbar .navbar-link{
+       font-size: 2rem;
+   }
+   .navbar .btn{
+       font-size: 2.2rem;
+       max-width: 340px;
+       height: 80px;
+   }
+}

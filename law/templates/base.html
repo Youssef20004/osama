@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}موقعي{% endblock %}</title>
+
+    <!-- BASE FILES CSS -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/consult.css' %}">
+        <link rel="stylesheet" href="{% static 'css/services.css' %}">
+        <link rel="stylesheet" href="{% static 'css/contact_us.css'%}">
+        <link rel="stylesheet" href="{% static 'css/lawyer_guide.css'%}">
+        <link rel="stylesheet" href="{% static 'css/library_law.css'%}">
+    {% endblock %}
+    
+    <!-- ICONS Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100..900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <!--SCREEN LOAD (Preloader) -->
+    <div class="preloader" data-proloader>
+        <div class="preloader-inner">
+            <img src="{% static 'images/logo2.png' %}" alt="Logo" width="70" height="70" class="img">
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    {% include 'pages/header.html' %}
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    {% include 'pages/footer.html' %}
+
+    <!-- BASE JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
