@@ -13,13 +13,28 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+
+# redis-16645.crce176.me-central-1-1.ec2.redns.redis-cloud.com:16645
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://default:eTATvHCbSWU0trYGACw5KH00HuUqG0kX@redis-16645.crce176.me-central-1-1.ec2.redns.redis-cloud.com:16645/0',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"  
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "youssefabdelrhim57@gmail.com"  
-EMAIL_HOST_PASSWORD = "nfra ynwj ovwt vhas"  
+EMAIL_HOST_USER = "osamaabdelrhim@gmail.com"
+EMAIL_HOST_PASSWORD = "otmc swic zyek gnyw"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
