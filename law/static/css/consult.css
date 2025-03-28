@@ -1,21 +1,23 @@
 
 /* SECTION CONSLUT */
-
-.consult .consult-img{
+.consult .consult-img {
     position: relative; 
-    background: url("http://127.0.0.1:8000/static/images/23467.png") no-repeat center center;
+    background: url("/static/images/23467.png") no-repeat center center;
     width: 100%;
     height: 200px;
     background-size: cover;
 }
-.consult .text{
+
+.consult .text {
     position: absolute;
-    top: 0%;
-    height: 250px;
-    width: 100%;
-    display: grid;
-    place-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
+
+
 .consult .text h1{
     text-align: center;
 }
@@ -64,7 +66,6 @@
     padding-inline: 20px;
     color: black;
     direction: rtl;
-    background: white;
 }
 
 .container-forms .form input[type= 'text']{
@@ -79,11 +80,31 @@
     margin-block: 40px;
     max-width: 350px;
 }
+
+.btn-input{
+    background-color: var(--color-btn);
+    width: 100%;
+    max-width: 150px;
+    white-space: nowrap;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.btn-input:hover{
+    background-color: var(--color-hover-btn);
+    transition: 500ms ease-in-out;
+}
+
+
 @media screen and (min-width: 768px){
     /* SECTION CONSLUT */
-    .consult .text{
-        top: 10%;
+    .consult .consult-img{
+        height: 300px;
     }
+
     .consult .text h1{
         font-size: 2rem;
     }
@@ -100,12 +121,22 @@
     }
 }
 
+@media screen and (min-width: 1024px){
+    /* SECTION CONSLUT */
+    .consult .consult-img{
+        height: 300px;
+    }
+    .consult .text-consult h1{
+        font-size: 2rem;
+    }
+}
+
 @media screen and (min-width: 1440px){
     /* SECTION CONSLUT */
-    .consult .text{
-        top: 25%;
+    .consult .consult-img{
+        height: 400px;
     }
-    .consult .text h1{
+    .consult .text-consult h1{
         font-size: 3rem;
     }
     /* FORMS */
@@ -126,48 +157,19 @@
 
 
 @media screen and (min-width: 1600px){
+     /* SECTION CONSLUT */
+     .consult .consult-img{
+        height: 500px;
+    }
     /* FORMS */
     .container-forms{
         padding-inline: 240px;
     }
 }
-@media screen and (min-width: 1700px){
-    /* FORMS */
-    .container-forms{
-        padding-inline: 300px;
-    }
-}
-@media screen and (min-width: 1900px){
-    /* FORMS */
-    .container-forms{
-        padding-inline: 350px;
-    }
-    /* FORMS forms */
-    .container-forms .form h1{
-        font-size: 2rem;
-    }
-  
-     /* FORMS Image */
 
-     .container-forms .img img{
-        max-width: 550px;
-    }
 
-    
 
-}
-@media screen and (min-width: 2100px){
-    /* FORMS */
-    .container-forms{
-        padding-inline: 400px;
-    }
-}
-@media screen and (min-width: 2300px){
-    /* FORMS */
-    .container-forms{
-        padding-inline: 500px;
-    }
-}
+
 
 
 
