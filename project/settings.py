@@ -20,7 +20,7 @@ import os
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://default:eTATvHCbSWU0trYGACw5KH00HuUqG0kX@redis-16645.crce176.me-central-1-1.ec2.redns.redis-cloud.com:16645/0',
+        'LOCATION': 'redis://default:ERyUNkdTE1Q7nF1Y4L8sRqc7LgaLjXjQ@redis-13517.c279.us-central1-1.gce.redns.redis-cloud.com:13517',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -50,7 +50,7 @@ SECRET_KEY = 'django-insecure-c_uf#-rlwz7^)_j913hb_24lh=1&k8j*apv#gut@j8#u4)35k-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['osamaabdelrhim.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
