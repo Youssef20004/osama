@@ -3,61 +3,67 @@
 
 {% block title %}اتصل بنا {% endblock %}
 {% block content %}
-    <section class="contact_us">
-        <div class="container">
-            <div class="contact-img-text">
-                
-                <div class="text-call">
+    <section class="cu-contact-us">
+        <div class="cu-container">
+            <div class="cu-contact-img-text">
+                <div class="cu-text-call">
                     <h1>اتصل بنا</h1>
                 </div>
             </div>
     
-    
-            <div class="contact">
-                <div class="icon-text">
-                    <img src="{% static 'images/1.png'%}" alt="">
+            <div class="cu-contact">
+                <div class="cu-icon-text">
+                    <a href="#">
+                        <img src="{% static 'images/1.png'%}" alt="اتصل بنا">
+                    </a>
                     <p>ابدأ استشارتك القانونية اليوم</p>
                     <p>+201206281444</p>
                 </div>
-                <div class="icon-text">
-                    <img src="{% static 'images/2.png'%}" alt="">
+                <div class="cu-icon-text">
+                    <a href="#">
+                        <img src="{% static 'images/2.png'%}" alt="البريد الإلكتروني">
+                    </a>
                     <p>البريد الالكتروني</p>
                     <p>osamaabdelrhim@gmail.com</p>
                 </div>
-                <div class="icon-text">
-                    <img src="{% static 'images/3.png'%}" alt="">
+                <div class="cu-icon-text">
+                    <a href="#">
+                        <img src="{% static 'images/3.png'%}" alt="الموقع">
+                    </a>
                     <p>العنوان</p>
                     <p>فلمنج - شارع مصطفى كامل - الإسكندرية</p>
                 </div>
             </div>
     
-            <form action="" class="form-contact">
+            <form action="" class="cu-form-contact" method="POST">
+                {% csrf_token %}
                 <h1 style="text-align: right">اتصل بنا الآن واستفد من استشارة قانونية مجانية</h1>
     
-                <div class="input-label">
-                    <label for="fname">الاسم</label>
+                <div class="cu-input-label">
+                    <label for="{{ form.name.id_for_label }}">الاسم</label>
                     <span>(مطلوب)</span>
-                    <input type="text" name="" id="">
+                    {{ form.name }}
                 </div>
-                <div class="input-label">
-                    <label for="fname">البريد الالكتروني</label><span>(مطلوب)</span>
-                    <input type="email">
+                <div class="cu-input-label">
+                    <label for="{{ form.email.id_for_label }}">البريد الالكتروني</label><span>(مطلوب)</span>
+                    {{ form.email }}
                 </div>
-                <div class="input-label">
-                    <label for="fname">رقم الهاتف</label><span>(مطلوب)</span>
-                    <input type="text">
+                <div class="cu-input-label">
+                    <label for="{{ form.phone.id_for_label }}">رقم الهاتف</label><span>(مطلوب)</span>
+                    {{ form.phone }}
                 </div>
-                <div class="input-label">
-                    <label for="fname">سبب التواصل</label><span>(مطلوب)</span>
-                    <input type="text">
+                <div class="cu-input-label">
+                    <label for="{{ form.subject.id_for_label }}">سبب التواصل</label><span>(مطلوب)</span>
+                    {{ form.subject }}
                 </div>
-                <div class="input-label">
-                    <label for="fname">الرسالة</label><span>(مطلوب)</span>
-                    <textarea name="" id=""></textarea>
+                <div class="cu-input-label">
+                    <label for="{{ form.message.id_for_label }}">الرسالة</label><span>(مطلوب)</span>
+                    {{ form.message }}
                 </div>
     
-                <button type="submit" class="btn btn-contact">أرسل رسالة</button>
+                <button type="submit" class="cu-btn" style="float: right;">أرسل رسالة</button>
             </form>
         </div>
     </section>
+    
 {% endblock %}
