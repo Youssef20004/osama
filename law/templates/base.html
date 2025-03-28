@@ -7,17 +7,18 @@
     <title>{% block title %}موقعي{% endblock %}</title>
 
     <!-- BASE FILES CSS -->
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}?v={{ timestamp }}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}?v={{ timestamp }}">
+
     
 
     {% block extra_css %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'css/consult.css' %}">
-        <link rel="stylesheet" href="{% static 'css/services.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}?v={{ timestamp }}">
+        <link rel="stylesheet" href="{% static 'css/services.css' %}?v={{ timestamp }}">
         <link rel="stylesheet" href="{% static 'css/contact_us.css'%}">
-        <link rel="stylesheet" href="{% static 'css/lawyer_guide.css'%}">
-        <link rel="stylesheet" href="{% static 'css/library_law.css'%}">
+        <link rel="stylesheet" href="{% static 'css/lawyer_guide.css'%}?v={{ timestamp }}">
+        <link rel="stylesheet" href="{% static 'css/library_law.css'%}?v={{ timestamp }}">
+        <link rel="stylesheet" href="{% static 'css/consult.css' %}?v={{ timestamp }}">
     {% endblock %}
     
     <!-- ICONS Boxicons -->
